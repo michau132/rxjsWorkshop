@@ -1,12 +1,21 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "baseUrl": "./",
+    "outDir": "./dist",
     "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "es6",
+    "declaration": false,
+    "module": "es2015",
     "moduleResolution": "node",
-    "target": "es6",
-    "allowJs": true,
-    "lib": ["es2017", "dom"]
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es5",
+    "lib": [
+      "es2018",
+      "dom",
+      "esnext"
+    ],
+    
   }
+
 }

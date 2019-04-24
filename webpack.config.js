@@ -1,7 +1,14 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+
 module.exports = {
   entry: './src/index.ts',
   devtool: 'inline-source-map',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
   module: {
     rules: [
       {
@@ -14,12 +21,15 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
   },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  },
   devServer: {
     compress: true,
-    port: 9000
-  }
+    port: 3000
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'rxjsWorkshop',
+      template: './src/index.html',
+    }),
+    new webpack.HotModuleReplacementPlugin()
+  ],
 };
