@@ -7,11 +7,11 @@ import ajaxCall from './ajax';
 import operators from './operators';
 
 export default function() {
-  // creating();
+  creating();
   // observer();
-  // unsubscribe();
   // emittingValue();
-  // fromEvent();
   // ajaxCall();
-  operators();
+  // fromEvent();
+  // operators();
+  // unsubscribe();
 }
