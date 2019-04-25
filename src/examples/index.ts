@@ -4,6 +4,7 @@ import unsubscribe from './unsubscribe';
 import emittingValue from './emittingValue';
 import fromEvent from './fromEvent';
 import ajaxCall from './ajax';
+import operators from './operators';
 
 export default function() {
   // creating();
@@ -11,5 +12,6 @@ export default function() {
   // unsubscribe();
   // emittingValue();
   // fromEvent();
-  ajaxCall();
+  // ajaxCall();
+  operators();
 }
